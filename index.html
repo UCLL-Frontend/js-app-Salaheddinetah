@@ -5,17 +5,15 @@
     <title>Uw voedingscentrum</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js" type="module"></script>
-<!--  font gevonden op canva.com  -->
-    <link rel="preload" href="https://static-cse.canva.com/_next/static/media/canva-sans-latin.cb8040b8.woff2" type="font/woff2" as="font" crossorigin="anonymous" referrerpolicy="strict-origin-when-cross-origin">
 </head>
 <body>
-
+<main>
 <nav>
     <ul>
         <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
-        <li>Home</li>
-        <li>Over ons</li>
-        <li>Voeg recept toe</li>
+        <li class="current">Home</li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="add.html">Voeg recept toe</a></li>
     </ul>
 </nav>
 <div class="wrapper">
@@ -30,11 +28,11 @@
     <section class="recepten"></section>
 
     <h2>Statistieken</h2>
-    <ul class="vb">
-        <li id="aantalRecepten"> Totaal aantal recepten:  </li>
-    </ul>
+    <div class="vb">
+        <p id="aantalRecepten"> Totaal aantal recepten:  </p>
+    </div>
 </div>
-
+</main>
 <footer> Salah E. Tahir, 2025 &copy;</footer>
 
 
