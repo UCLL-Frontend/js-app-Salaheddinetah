@@ -1,0 +1,77 @@
+:root {
+    --bg-color: #ecece9;
+    --text-color: #0a0708;
+    --nav-color: ;
+    --brd-radius: 30px;
+    --gv: #FFA07A;
+    --lv: #ADD8E6;
+    --mv: #FFD700;
+    --vv: #7CFC00;
+    --v: #FFD700;
+    --zv: #90EE90;
+}
+
+/* Gevonden in canva.com code */
+
+@font-face {
+        font-family: 'Canva Sans';
+        src: url('https://static-cse.canva.com/_next/static/media/canva-sans-latin.cb8040b8.woff2')
+        format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Canva Sans";
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: var(--brd-radius);
+    background-color: var(--nav-color);
+}
+
+nav ul > li:not(.logo) {
+    background-color: #3bb371;
+    border-radius: var(--brd-radius);
+    text-align: center;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+}
+
+nav ul  > li {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+nav ul > li:not(.logo):hover {
+     background-color: #ecd7d7;
+     border: 3px solid var(--text-color) ;
+     color: var(--text-color);
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
