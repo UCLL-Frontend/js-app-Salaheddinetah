@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added function showInfo, addRecipe">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added borders to recipe article where each allergy have a color">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
@@ -90,7 +90,7 @@
       <workItem from="1755521771545" duration="37000" />
       <workItem from="1755529218003" duration="3380000" />
       <workItem from="1755578283128" duration="705000" />
-      <workItem from="1755940321823" duration="6019000" />
+      <workItem from="1755940321823" duration="9365000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -124,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755965919231</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added borders to recipe article where each allergy have a color">
+      <option name="closed" value="true" />
+      <created>1755969027954</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755969027954</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +142,7 @@
     <MESSAGE value="initial commit : added html, basic css, logo" />
     <MESSAGE value="added add.html, over-ons html, responsivness and links" />
     <MESSAGE value="added function showInfo, addRecipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="added function showInfo, addRecipe" />
+    <MESSAGE value="added borders to recipe article where each allergy have a color" />
+    <option name="LAST_COMMIT_MESSAGE" value="added borders to recipe article where each allergy have a color" />
   </component>
 </project>

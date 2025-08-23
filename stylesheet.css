@@ -150,6 +150,16 @@ article.gv.lv.zv {
     margin: 1rem;
 }
 
+.allergies {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=checkbox] {
+    margin: 0.5rem;
+}
+
+
 @media (max-width: 500px) {
     nav ul { display: grid; grid-auto-flow: row;    }
 }

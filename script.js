@@ -19,22 +19,38 @@ function addRecipe(recipe) {
     document.querySelector('.recipe-article').appendChild(recipeArticle);
 }
 
-function countCharacters()  {
-    let numberLetters = document.querySelector('.input-box').value.length;
-        document.querySelector('.number-characters').innerText = numberLetters;
-}
-
-document.querySelector('.input-box').addEventListener('input', countCharacters);
 
 function recipeNumber() {
-    document.querySelector('.numberRecipes').innerHTML += `${allRecipes.length}`;
+    document.querySelector('.numberRecipes').innerHTML = ` Totaal aantal recepten: ${allRecipes.length}`;
 }
 
-function showInfo(){
-    allRecipes.forEach(addRecipe);
+function showInfo() {
+    const searchValue = document.querySelector('.input-box').value.toLowerCase();
+    document.querySelector('.recipe-article').innerHTML = "";
+
+    allRecipes.forEach(recipe => {
+        if (recipe.title.toLowerCase().includes(searchValue)) {
+            addRecipe(recipe);
+        }
+    });
     recipeNumber();
-    countCharacters();
+
+
 }
 
 
+
+function countCharacters()  {
+    let numberLetters = document.querySelector('.input-box').value.length;
+    document.querySelector('.number-characters').innerText = numberLetters;
+}
+
+document.querySelector('.input-box').addEventListener('input', () => {
+    countCharacters();
+    showInfo();
+});
+
+
+countCharacters();
 showInfo();
+
