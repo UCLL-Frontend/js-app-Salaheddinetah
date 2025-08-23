@@ -39,10 +39,11 @@ recipeSection.addEventListener('recipesUpdate', showInfo)
 
 function addRecipe(recipe) {
     const recipeArticle = document.createElement('article');
-    recipeArticle.innerHTML = `<h2>${recipe.title}</h2><h3>${recipe.level}</h3><h3>${recipe.allergy}</h3>`;
+    recipeArticle.innerHTML = `<img class="delete" src="./img/delete.svg" alt="delete recipe"> <h2>${recipe.title}</h2><h3>${recipe.level}</h3><h3>${recipe.allergy}</h3>`;
     recipeArticle.classList.add(`${recipe.allergy}`);
     document.querySelector('.recipe-article').appendChild(recipeArticle);
 }
+
 
 // function for recipesNumber
 
@@ -59,10 +60,13 @@ function showInfo() {
     document.querySelector('.recipe-article').innerHTML = ""; // to use seach box
 
     allRecipes.forEach(recipe => {
-        if (recipe.title.toLowerCase().includes(searchValue) && selectedAllergies.includes(recipe.allergy)) {
+        if (recipe.title.toLowerCase().includes(searchValue) && selectedAllergies.length === 0 || selectedAllergies.includes(recipe.allergy)) {
             addRecipe(recipe);
         }
-    });
+
+
+        });
+
     recipeNumber();
 
 

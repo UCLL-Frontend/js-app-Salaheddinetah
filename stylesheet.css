@@ -35,7 +35,7 @@ body {
 }
 
 main {
-    margin-inline: 5%;
+    margin-inline: 10%;
 }
 
 nav {
@@ -61,6 +61,9 @@ nav ul a {
     font-size: 1rem;
 }
 
+.current {
+    background-color: black;
+}
 
 nav ul > li:not(.logo) {
     background-color: #3bb371;
@@ -70,6 +73,10 @@ nav ul > li:not(.logo) {
     white-space: nowrap;
 }
 
+nav ul > li:not(.logo,.current):hover {
+    box-shadow: 0px 0px 10px #8f8f8f;
+}
+
 nav ul  > li {
     text-decoration: none;
     color: white;
@@ -77,23 +84,19 @@ nav ul  > li {
     font-size: 1rem;
 }
 
-
-
-nav ul > li:not(.logo):hover, ul a:hover {
-     background-color: #ffff;
-     border: 3px solid #3bb371 ;
-     color: var(--text-color);
+nav ul > li.current {
+    background-color: white;
+    color: black;
+    border: 3px solid #3bb371;
 }
+
 
 .logo img {
     height: 100px;
     width: auto;
 }
 
-.current {
-    background-color: #ffff;
-    box-shadow:2px 2px 5px #bbb;
-}
+
 
 footer {
     background-color: #3bb371;
@@ -102,11 +105,21 @@ footer {
 
 .recipe-article article
 {
-    border: 1px solid var(--text-color);
+    position: relative;
+    border: 0px solid var(--text-color);
     border-radius: 10px;
     margin: 1rem;
     padding: 1rem;
     border-left-width: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #bbb;
+}
+
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
 }
 
 article.gv { border-left-color: var(--gv); }

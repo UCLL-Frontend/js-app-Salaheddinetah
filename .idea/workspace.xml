@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added recipeSection">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added function to filter with allergies">
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <workItem from="1755521771545" duration="37000" />
       <workItem from="1755529218003" duration="3380000" />
       <workItem from="1755578283128" duration="705000" />
-      <workItem from="1755940321823" duration="11774000" />
+      <workItem from="1755940321823" duration="16123000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -146,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755979350009</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added function to filter with allergies">
+      <option name="closed" value="true" />
+      <created>1755980184037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1755980184037</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +168,7 @@
     <MESSAGE value="added borders to recipe article where each allergy have a color" />
     <MESSAGE value="added function find recipes using search box, added checkboxes and css to filter with allergies" />
     <MESSAGE value="added recipeSection" />
-    <option name="LAST_COMMIT_MESSAGE" value="added recipeSection" />
+    <MESSAGE value="added function to filter with allergies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function to filter with allergies" />
   </component>
 </project>
