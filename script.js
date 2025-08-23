@@ -23,6 +23,18 @@ checkboxes.forEach(checkbox => {
     })
 })
 
+function allergyList() {
+    const allAllergy = []
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            allAllergy.push(checkbox.value)
+        }
+    })
+    return allAllergy;
+}
+
+recipeSection.addEventListener('recipesUpdate', showInfo)
+
 // function to create recipes articles
 
 function addRecipe(recipe) {
@@ -42,11 +54,12 @@ function recipeNumber() {
 // function to show all info
 
 function showInfo() {
+    const selectedAllergies = allergyList(); // to filter with allergy
     const searchValue = document.querySelector('.input-box').value.toLowerCase();
-    document.querySelector('.recipe-article').innerHTML = "";
+    document.querySelector('.recipe-article').innerHTML = ""; // to use seach box
 
     allRecipes.forEach(recipe => {
-        if (recipe.title.toLowerCase().includes(searchValue) && checkbox.checked && checkbox.value === recipe.allergy) {
+        if (recipe.title.toLowerCase().includes(searchValue) && selectedAllergies.includes(recipe.allergy)) {
             addRecipe(recipe);
         }
     });
