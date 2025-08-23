@@ -7,9 +7,9 @@ const allRecipes = [{
     level: 'Super makkelijk'
 },
     {
-        title: 'Zucchuni patties',
-        allergy: 'g',
-        level: 'Super makkelijk'
+        title: 'Beef patties',
+        allergy: 'lv',
+        level: 'Makkelijk'
     }]
 
 function addRecipe(recipe) {
@@ -19,6 +19,13 @@ function addRecipe(recipe) {
     document.querySelector('.recipe-article').appendChild(recipeArticle);
 }
 
+function countCharacters()  {
+    let numberLetters = document.querySelector('.input-box').value.length;
+        document.querySelector('.number-characters').innerText = numberLetters;
+}
+
+document.querySelector('.input-box').addEventListener('input', countCharacters);
+
 function recipeNumber() {
     document.querySelector('.numberRecipes').innerHTML += `${allRecipes.length}`;
 }
@@ -26,6 +33,7 @@ function recipeNumber() {
 function showInfo(){
     allRecipes.forEach(addRecipe);
     recipeNumber();
+    countCharacters();
 }
 
 
