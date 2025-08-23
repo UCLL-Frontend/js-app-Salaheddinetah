@@ -1,6 +1,6 @@
 
 
-
+// array with recipes
 const allRecipes = [{
     title: 'Zucchuni patties',
     allergy: 'gv',
@@ -12,6 +12,19 @@ const allRecipes = [{
         level: 'Makkelijk'
     }]
 
+// filter with checkbox
+
+const recipeSection = document.querySelector('section.recipe-article')
+
+const checkboxes = document.querySelectorAll('input[name=allergy]')
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+         recipeSection.dispatchEvent(new CustomEvent ('recipesUpdate'))
+    })
+})
+
+// function to create recipes articles
+
 function addRecipe(recipe) {
     const recipeArticle = document.createElement('article');
     recipeArticle.innerHTML = `<h2>${recipe.title}</h2><h3>${recipe.level}</h3><h3>${recipe.allergy}</h3>`;
@@ -19,17 +32,21 @@ function addRecipe(recipe) {
     document.querySelector('.recipe-article').appendChild(recipeArticle);
 }
 
+// function for recipesNumber
+
 
 function recipeNumber() {
     document.querySelector('.numberRecipes').innerHTML = ` Totaal aantal recepten: ${allRecipes.length}`;
 }
+
+// function to show all info
 
 function showInfo() {
     const searchValue = document.querySelector('.input-box').value.toLowerCase();
     document.querySelector('.recipe-article').innerHTML = "";
 
     allRecipes.forEach(recipe => {
-        if (recipe.title.toLowerCase().includes(searchValue)) {
+        if (recipe.title.toLowerCase().includes(searchValue) && checkbox.checked && checkbox.value === recipe.allergy) {
             addRecipe(recipe);
         }
     });
@@ -38,12 +55,15 @@ function showInfo() {
 
 }
 
+// function to count characters
 
 
 function countCharacters()  {
     let numberLetters = document.querySelector('.input-box').value.length;
     document.querySelector('.number-characters').innerText = numberLetters;
 }
+
+// find using searchbox
 
 document.querySelector('.input-box').addEventListener('input', () => {
     countCharacters();
