@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Uw voedingscentrum</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js" type="module"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <main>
@@ -20,16 +20,17 @@
     <h1>Gezonde enkele recepten</h1>
 
     <h2>Vind uw volgende recept met dit zoekveld</h2>
-    <p>Aantal karakters in dit zoekveld: <span id="aantalLetters"></span></p>
-    <form class="zoekTekst">
-        <input type="text"></input>
-    </form>
+    <p>Aantal karakters in dit zoekveld: <span class="number-characters"></span></p>
+    <form class="search-box">
 
-    <section class="recepten"></section>
+        <input type="text">
+    </form>
+    <section class="recipe-article"></section>
 
     <h2>Statistieken</h2>
-    <div class="vb">
-        <p id="aantalRecepten"> Totaal aantal recepten:  </p>
+
+    <div>
+        <p class="numberRecipes"> Totaal aantal recepten:  </p>
     </div>
 </div>
 </main>

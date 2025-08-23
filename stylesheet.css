@@ -103,6 +103,14 @@ footer {
     padding: 1rem;
 }
 
+.recipe-article article
+{
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
 @media (max-width: 500px) {
     nav ul { display: grid; grid-auto-flow: row;    }
 }
