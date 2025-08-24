@@ -12,7 +12,6 @@
         <ul>
             <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
             <li class="current">Home</li>
-            <li><a href="over-ons.html">Over ons</a></li>
             <li><a href="add.html">Voeg recept toe</a></li>
         </ul>
     </nav>
@@ -34,6 +33,24 @@
         <label class="Sugarfree">
             <input name="allergy" value="zv" type="checkbox">Zuikervrij
         </label>
+    </form>
+
+    <div class="notification">  </div>
+
+    <form class="add">
+        <label for="title">Recept Titel</label>
+        <input type="text" id="title" name="title">
+
+        <label for="text">Recept</label>
+        <input type="text" id="text" name="text">
+
+        <label >Allergieën</label>
+        <label > <input type="checkbox" class="gv" name="allergy">Glutenvrij</label>
+        <label ><input type="checkbox" class="lv" name="allergy">Lactosevrij</label>
+        <label ><input type="checkbox" class="zv" name="allergy">Zuikervrij</label>
+        <label for="level">Niveau</label>
+        <input type="text" id="level" name="level">
+        <input type="submit" value="Voeg jouw recept toe">
     </form>
 
     <section class="recipe-article"></section>

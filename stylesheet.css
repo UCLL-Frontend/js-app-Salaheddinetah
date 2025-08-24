@@ -194,6 +194,18 @@ input[type=checkbox] {
     padding: 1rem;
 }
 
+.notification {
+    margin-block: 1rem;
+}
+
+p.ok {
+    color: var(--text-color);
+}
+
+p.error {
+    color: darkred;
+}
+
 
 @media (max-width: 500px) {
     nav ul { display: grid; grid-auto-flow: row;    }
