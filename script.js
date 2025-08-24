@@ -42,6 +42,18 @@ function addRecipe(recipe) {
     recipeArticle.innerHTML = `<img class="delete" src="./img/delete.svg" alt="delete recipe"> <h2>${recipe.title}</h2><h3>${recipe.level}</h3><h3>${recipe.allergy}</h3>`;
     recipeArticle.classList.add(`${recipe.allergy}`);
     document.querySelector('.recipe-article').appendChild(recipeArticle);
+    recipeArticle.querySelector('.delete').addEventListener('click', () => {
+        deleteRecipe(recipe.title);
+    });
+}
+
+// function delete a recipe
+
+function deleteRecipe(deleteTitle) {
+    const place = allRecipes.findIndex(recipe => recipe.title === deleteTitle);
+    allRecipes.splice(place, 1);
+recipeSection.dispatchEvent(new CustomEvent('recipesUpdate'));
+    recipeNumber();
 }
 
 
@@ -71,6 +83,8 @@ function showInfo() {
 
 
 }
+
+
 
 // function to count characters
 
