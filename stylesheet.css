@@ -172,6 +172,28 @@ input[type=checkbox] {
     margin: 0.5rem;
 }
 
+.add {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0.5rem;
+}
+
+.add input {
+    margin-block: 1rem;
+    width: max(1fr, 100%);
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: var(--brd-radius);
+}
+
+.add input[type='submit'] {
+    background-color: #3bb371;
+    color: white;
+    border: none;
+    padding: 1rem;
+}
+
 
 @media (max-width: 500px) {
     nav ul { display: grid; grid-auto-flow: row;    }
