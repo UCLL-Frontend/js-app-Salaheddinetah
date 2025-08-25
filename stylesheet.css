@@ -1,26 +1,22 @@
 :root {
     --bg-color: #ecece9;
     --text-color: #0a0708;
-    --nav-color: ;
     --brd-radius: 30px;
     --gv: #FFA07A;
     --lv: #ADD8E6;
     --zv: #90EE90;
 }
 
-/* Gevonden in canva.com code */
-
 @font-face {
-        font-family: 'Canva Sans';
-        src: url('https://static-cse.canva.com/_next/static/media/canva-sans-latin.cb8040b8.woff2')
-        format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
+    font-family: 'Canva Sans';
+    src: url('https://static-cse.canva.com/_next/static/media/canva-sans-latin.cb8040b8.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     font-family: "Canva Sans";
 }
@@ -35,23 +31,29 @@ body {
 }
 
 main {
-    margin-inline: 10%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 nav {
+    display: flex;
     justify-content: center;
     padding: 20px 0;
-    max-width: max(100%, 50rem);
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem;
     font-weight: bolder;
     border-radius: var(--brd-radius);
-    background-color: var(--nav-color);
 }
 
 nav ul a {
@@ -71,13 +73,14 @@ nav ul > li:not(.logo) {
     text-align: center;
     padding: 1rem 2rem;
     white-space: nowrap;
+    width: 100%;
 }
 
 nav ul > li:not(.logo,.current):hover {
     box-shadow: 0px 0px 10px #8f8f8f;
 }
 
-nav ul  > li {
+nav ul > li {
     text-decoration: none;
     color: white;
     font-weight: 100;
@@ -90,21 +93,28 @@ nav ul > li.current {
     border: 3px solid #3bb371;
 }
 
-
 .logo img {
     height: 100px;
     width: auto;
 }
 
-
-
 footer {
     background-color: #3bb371;
     padding: 1rem;
+    color: white;
 }
 
-.recipe-article article
-{
+.wrapper {
+    margin: 0;
+}
+
+.recipe-article {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.recipe-article article {
     position: relative;
     border: 0px solid var(--text-color);
     border-radius: 10px;
@@ -117,7 +127,7 @@ footer {
 
 .delete {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     right: 10px;
     width: 2rem;
 }
@@ -128,39 +138,30 @@ article.zv { border-left-color: var(--zv); }
 
 article.gv.lv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom,
-    var(--gv) 50%,
-    var(--lv) 50%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 50%, var(--lv) 50%) 1;
 }
 
 article.gv.zv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom,
-    var(--gv) 50%,
-    var(--zv) 50%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 50%, var(--zv) 50%) 1;
 }
 
 article.lv.zv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom,
-    var(--lv) 50%,
-    var(--zv) 50%) 1;
+    border-image: linear-gradient(to bottom, var(--lv) 50%, var(--zv) 50%) 1;
 }
 
 article.gv.lv.zv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom,
-    var(--gv) 33.33%,
-    var(--lv) 33.33%,
-    var(--zv) 33.34%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 33.33%, var(--lv) 33.33%, var(--zv) 33.34%) 1;
 }
 
 .input-box {
     padding: 1rem;
-    width: max(1fr, 100%);
+    width: 100%;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 .allergies {
@@ -181,7 +182,7 @@ input[type=checkbox] {
 
 .add input {
     margin-block: 1rem;
-    width: max(1fr, 100%);
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
@@ -196,17 +197,52 @@ input[type=checkbox] {
 
 .notification {
     margin-block: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
 }
 
 p.ok {
-    color: var(--text-color);
+    color: darkgreen;
 }
 
 p.error {
     color: darkred;
 }
 
+article img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
 
-@media (max-width: 500px) {
-    nav ul { display: grid; grid-auto-flow: row;    }
+@media (min-width: 500px) and (max-width: 899px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+    nav ul > li:not(.logo) {
+        width: auto;
+    }
+    .recipe-article {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    nav ul > li:not(.logo) {
+        flex: 1;
+        text-align: center;
+    }
+    .recipe-article {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
