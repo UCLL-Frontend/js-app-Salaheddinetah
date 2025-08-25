@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Uw voedingscentrum</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js" type="module"></script>
+    <script src="script.js" type="module" defer></script>
 </head>
 <body>
 
@@ -22,6 +22,8 @@
 
     <div class="notification"></div>
 
+    <div class="notification">  </div>
+
     <form class="add">
         <label for="title">Recept Titel</label>
         <input type="text" id="title" name="title">
@@ -29,12 +31,12 @@
         <label for="text">Recept</label>
         <input type="text" id="text" name="text">
 
-        <label for="allergy">Allergieën</label>
-        <input type="checkbox" id="allergy" name="allergy">
-
+        <label >Allergieën</label>
+        <label > <input type="checkbox" class="gv" name="allergy">Glutenvrij</label>
+        <label ><input type="checkbox" class="lv" name="allergy">Lactosevrij</label>
+        <label ><input type="checkbox" class="zv" name="allergy" >Zuikervrij</label>
         <label for="level">Niveau</label>
         <input type="text" id="level" name="level">
-
         <input type="submit" value="Voeg jouw recept toe">
     </form>
 
