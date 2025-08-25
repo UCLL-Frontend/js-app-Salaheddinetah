@@ -12,7 +12,7 @@ function notification(type, message) {
 // function for add.html form
 function addPage() {
     const selectedAllergies = [];
-    ocument.querySelectorAll('input[name="allergy"]:checked').forEach(cb => selectedAllergies.push(cb.value));
+    document.querySelectorAll('input[name="allergy"]:checked').forEach(cb => selectedAllergies.push(cb.value));
 
     const newRecipe = {
         title: document.querySelector('#title').value,
@@ -25,7 +25,6 @@ function addPage() {
         allRecipes.push(newRecipe);
         localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
         notification('ok', 'Recept toegevoegd!');
-
     } else {
         notification('error', 'Niet alle velden ingevuld!');
     }

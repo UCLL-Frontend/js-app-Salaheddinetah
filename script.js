@@ -1,13 +1,13 @@
 import { basicRecipes } from './recipes.js';
 console.log(document.querySelector('section.recipe-article'));
 
-// Load all recipes from localStorage
+
 let allRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || basicRecipes;
 
-// filter with checkbox
+
 const recipeSection = document.querySelector('section.recipe-article')
 
-// event type string
+
 const update = 'recipe-update';
 
 // Checkbox event listeners
