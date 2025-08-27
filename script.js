@@ -1,14 +1,30 @@
 import { basicRecipes } from './recipes.js';
 console.log(document.querySelector('section.recipe-article'));
 
-
 let allRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || basicRecipes;
-
 
 const recipeSection = document.querySelector('section.recipe-article')
 
-
 const update = 'recipe-update';
+
+// Hier had ik Gemini gebruikt. Ik had mijn eigen functie maar ik had wat problemen ermee
+
+const allergyMapping = {
+    'gv': { name: 'Glutenvrij', color: '#FFA07A' },
+    'lv': { name: 'Lactosevrij', color: '#ADD8E6' },
+    'sv': { name: 'Suikervrij', color: '#90EE90' }
+};
+
+function getAllergyDisplayNames(allergyCodes) {
+    return allergyCodes.split(',')
+        .map(code => allergyMapping[code.trim()]?.name || code)
+        .join(', ');
+}
+
+function getPrimaryAllergyColor(allergyCodes) {
+    const firstAllergy = allergyCodes.split(',')[0].trim();
+    return allergyMapping[firstAllergy]?.color || '#3bb371';
+}
 
 // Checkbox event listeners
 const checkboxes = document.querySelectorAll('input[name=allergy]')
@@ -18,7 +34,7 @@ checkboxes.forEach(checkbox => {
     })
 })
 
-// get list of selected allergies
+// list of selected allergies
 function allergyList() {
     const allAllergy = []
     checkboxes.forEach(checkbox => {
@@ -29,25 +45,48 @@ function allergyList() {
     return allAllergy;
 }
 
-// correct event listener
 recipeSection.addEventListener(update, showInfo)
+
+
 
 // function to create recipe articles
 function addRecipe(recipe) {
     const recipeArticle = document.createElement('article');
+    const allergyDisplayNames = getAllergyDisplayNames(recipe.allergy);
+    const linkColor = getPrimaryAllergyColor(recipe.allergy);
+
     recipeArticle.innerHTML = `
+        <h2>${recipe.title}</h2>
         <img class="recipe-img" src="${recipe.image}" alt="recept afbeelding">
-      
+        
         <h3>${recipe.level}</h3>
-        <h3>${recipe.allergy}</h3>
-        <img class="delete" src="./img/delete.svg" alt="delete recipe"> 
-        <a class="recipe-link ${recipe.allergy}" href="${recipe.link}">Recept link</a>
+        <h3>${allergyDisplayNames}</h3>
+        <a class="recipe-link" href="${recipe.link}" style="border-color: ${linkColor}; color: ${linkColor};">Recept link</a>
+        <img class="delete" src="./img/delete.svg" alt="delete recipe">
     `;
-    recipeArticle.classList.add(...recipe.allergy.split(','));
+    recipeArticle.classList.add(...recipe.allergy.split(',').map(a => a.trim()));
     document.querySelector('.recipe-article').appendChild(recipeArticle);
     recipeArticle.querySelector('.delete').addEventListener('click', () => {
         deleteRecipe(recipe.title);
     });
+}
+
+//  checkboxes with difficulty
+const difficultyCheckboxes = document.querySelectorAll('input[name=difficulty]')
+difficultyCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        recipeSection.dispatchEvent(new CustomEvent(update))
+    })
+})
+
+function difficultyList() {
+    const selectedDifficulties = []
+    difficultyCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            selectedDifficulties.push(checkbox.value)
+        }
+    })
+    return selectedDifficulties;
 }
 
 // function delete a recipe
@@ -71,7 +110,7 @@ function showInfo() {
     document.querySelector('.recipe-article').innerHTML = ""; // clear recipes
 
     allRecipes.forEach(recipe => {
-        const recipeAllergies = recipe.allergy.split(',');
+        const recipeAllergies = recipe.allergy.split(',').map(a => a.trim());
         if (
             recipe.title.toLowerCase().includes(searchValue) &&
             (selectedAllergies.length === 0 || selectedAllergies.some(a => recipeAllergies.includes(a)))

@@ -131,13 +131,17 @@ main {
 }
 
 .recipe-link {
-    padding: 1rem;
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
     text-decoration: none;
-    color: var(--text-color);
     background: white;
-    border: 3px solid #3bb371;
+    border: 2px solid;
     border-radius: var(--brd-radius);
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 1;
 }
+
 
 
 .delete {
@@ -169,7 +173,7 @@ article.lv.sv {
 
 article.gv.lv.sv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--gv) 33.33%, var(--lv) 33.33%, var(--sv) 33.34%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 30%, var(--lv) 30%, var(--sv) 30%) 1;
 }
 
 .input-box {
@@ -183,10 +187,25 @@ article.gv.lv.sv {
  font-size: 0.8rem;
 }
 
+.search-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .allergies {
     display: flex;
     margin-block: 1rem;
     flex-direction: column;
+}
+
+.difficulty-filters {
+    display: flex;
+    margin-block: 1rem;
+    flex-direction: column;
+}
+
+.difficulty-filters input[type=checkbox] {
+    margin: 0.5rem;
 }
 
 input[type=checkbox] {

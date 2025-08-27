@@ -25,7 +25,7 @@
         <p>Gebruik het zoekveld en de filters hieronder om geschikte recepten te vinden.</p>
 
         <form class="search-box" role="search" aria-label="Zoek naar recepten">
-            <label for="search-input" class="visually-hidden">Zoekterm</label>
+            <label for="search-input">Zoekveld</label>
             <input class="input-box" id="search-input" type="text" placeholder="Bijv. quiche, smoothie, cake...">
         </form>
 
@@ -33,26 +33,55 @@
             Aantal tekens in zoekveld: <span class="number-characters">0</span>
         </p>
 
-        <h3>Filter op dieetwensen</h3>
-        <form class="allergies" aria-label="Dieetfilters">
-            <label class="glutenfree" for="filter-glutenfree">
-                <input id="filter-glutenfree" name="allergy" value="gv" type="checkbox">
-                Glutenvrij
-            </label>
+        <div class="search-filters">
 
-            <label class="lacatosefree" for="filter-lactosefree">
-                <input id="filter-lactosefree" name="allergy" value="lv" type="checkbox">
-                Lactosevrij
-            </label>
+            <form class="allergies" aria-label="Dieetfilters">
+                <h3>Filter op dieetwensen</h3>
+                <label class="glutenfree" for="filter-glutenfree">
+                    <input id="filter-glutenfree" name="allergy" value="gv" type="checkbox">
+                    Glutenvrij
+                </label>
 
-            <label class="Sugarfree" for="filter-sugarfree">
-                <input id="filter-sugarfree" name="allergy" value="sv" type="checkbox">
-                Suikervrij
-            </label>
-        </form>
+                <label class="lacatosefree" for="filter-lactosefree">
+                    <input id="filter-lactosefree" name="allergy" value="lv" type="checkbox">
+                    Lactosevrij
+                </label>
+
+                <label class="Sugarfree" for="filter-sugarfree">
+                    <input id="filter-sugarfree" name="allergy" value="sv" type="checkbox">
+                    Suikervrij
+                </label>
+            </form>
+
+
+            <form class="difficulty-filters">
+                <h3>Filter op moeilijkheidsgraad</h3>
+                <label>
+                    <input name="difficulty" value="Super makkelijk" type="checkbox">
+                    Super makkelijk
+                </label>
+                <label>
+                    <input name="difficulty" value="Makkelijk" type="checkbox">
+                    Makkelijk
+                </label>
+                <label>
+                    <input name="difficulty" value="Gemiddeld" type="checkbox">
+                    Gemiddeld
+                </label>
+                <label>
+                    <input name="difficulty" value="Moeilijk" type="checkbox">
+                    Moeilijk
+                </label>
+            </form>
+        </div>
+
+
+
 
         <section class="recipe-article" aria-live="polite">
         </section>
+
+
 
         <h2>Statistieken</h2>
         <p class="numberRecipes">Totaal aantal recepten: <span id="total-count">0</span></p>
