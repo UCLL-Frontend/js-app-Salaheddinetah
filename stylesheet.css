@@ -112,15 +112,17 @@ main {
 
 .recipe-article article {
     position: relative;
-    border: 0px solid var(--text-color);
+    border: 0 solid var(--text-color);
     border-radius: 10px;
     margin: 1rem;
-    padding: 1rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
     border-left-width: 10px;
     background-color: #fff;
     box-shadow: 5px 5px 10px #bbb;
+
 }
-article>img {
+.recipe-img {
     border-radius: 10px;
     width: 280px;
     height: 280px;
@@ -129,9 +131,10 @@ article>img {
 
 .delete {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 10px;
+    right: 10px;
     width: 2rem;
+    aspect-ratio: 1;
 }
 
 article.gv { border-left-color: var(--gv); }
