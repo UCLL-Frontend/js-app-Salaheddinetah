@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>'t Voedingshoekje - App</title>
+    <title>'t Voedingshoekje – Receptenapp</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js" type="module" ></script>
+    <script src="script.js" type="module"></script>
 </head>
 <body>
 <nav>
     <ul>
-        <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
-        <li class="current">Home</li>
-        <li><a href="add.html">Voeg recept toe</a></li>
+        <li class="logo">
+            <img src="img/logo.png" alt="Logo van 't Voedingshoekje">
+        </li>
+        <li class="current" >Home</li>
+        <li><a href="add.html">Voeg een recept toe</a></li>
     </ul>
 </nav>
 
 <main>
+    <div class="wrapper">
+        <h1>Gezonde en makkelijke recepten</h1>
 
-<div class="wrapper">
-    <h1>Gezonde enkele recepten</h1>
+        <h2>Zoek een recept dat bij jou past</h2>
+        <p>Gebruik het zoekveld en de filters hieronder om geschikte recepten te vinden.</p>
 
-    <h2>Vind uw volgende recept met dit zoekveld en deze filters</h2>
+        <form class="search-box" role="search" aria-label="Zoek naar recepten">
+            <label for="search-input" class="visually-hidden">Zoekterm</label>
+            <input class="input-box" id="search-input" type="text" placeholder="Bijv. quiche, smoothie, cake...">
+        </form>
 
-    <form class="search-box">
-        <input class="input-box" type="text">
-    </form>
+        <p class="search-box-text">
+            Aantal tekens in zoekveld: <span class="number-characters">0</span>
+        </p>
 
-    <p class="search-box-text"> Aantal karakters in dit zoekveld: <span class="number-characters"></span></p>
+        <h3>Filter op dieetwensen</h3>
+        <form class="allergies" aria-label="Dieetfilters">
+            <label class="glutenfree" for="filter-glutenfree">
+                <input id="filter-glutenfree" name="allergy" value="gv" type="checkbox">
+                Glutenvrij
+            </label>
 
-    <form class="allergies">
-        <label class="glutenfree">
-            <input name="allergy" value="gv" type="checkbox">Glutenvrij</label>
-        <label class="lacatosefree">
-            <input name="allergy" value="lv" type="checkbox">Lactosevrij
-        </label>
-        <label class="Sugarfree">
-            <input name="allergy" value="sv" type="checkbox">Suikervrij
-        </label>
-    </form>
+            <label class="lacatosefree" for="filter-lactosefree">
+                <input id="filter-lactosefree" name="allergy" value="lv" type="checkbox">
+                Lactosevrij
+            </label>
 
+            <label class="Sugarfree" for="filter-sugarfree">
+                <input id="filter-sugarfree" name="allergy" value="sv" type="checkbox">
+                Suikervrij
+            </label>
+        </form>
 
+        <section class="recipe-article" aria-live="polite">
+        </section>
 
-    <section class="recipe-article"></section>
-
-    <h2>Statistieken</h2>
-
-    <div>
-        <p class="numberRecipes"> Totaal aantal recepten:  </p>
+        <h2>Statistieken</h2>
+        <p class="numberRecipes">Totaal aantal recepten: <span id="total-count">0</span></p>
     </div>
-</div>
-
 </main>
 
-<footer> Salah E. Tahir, 2025 &copy;</footer>
-
+<footer>
+    &copy; 2025 Salah E. Tahir.
+</footer>
 </body>
 </html>
