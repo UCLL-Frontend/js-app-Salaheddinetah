@@ -157,23 +157,44 @@ article.lv { border-left-color: var(--lv); }
 article.sv { border-left-color: var(--sv); }
 
 article.gv.lv {
-    border-left: 6px solid;
+    border-left: 10px solid;
     border-image: linear-gradient(to bottom, var(--gv) 50%, var(--lv) 50%) 1;
 }
 
 article.gv.sv {
-    border-left: 6px solid;
+    border-left: 10px solid;
     border-image: linear-gradient(to bottom, var(--gv) 50%, var(--sv) 50%) 1;
 }
 
 article.lv.sv {
-    border-left: 6px solid;
+    border-left: 10px solid;
     border-image: linear-gradient(to bottom, var(--lv) 50%, var(--sv) 50%) 1;
 }
 
+/* Remove your existing border-image rules and use this instead */
 article.gv.lv.sv {
-    border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--gv) 30%, var(--lv) 30%, var(--sv) 30%) 1;
+    position: relative;
+    border-left: 10px solid var(--gv);
+}
+
+article.gv.lv.sv::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 33.33%;
+    width: 10px;
+    height: 33.33%;
+    background-color: var(--lv);
+}
+
+article.gv.lv.sv::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 10px;
+    height: 33.34%;
+    background-color: var(--sv);
 }
 
 .input-box {
@@ -192,15 +213,14 @@ article.gv.lv.sv {
     grid-template-columns: 1fr 1fr;
 }
 
-.allergies {
-    display: flex;
-    margin-block: 1rem;
-    flex-direction: column;
+.filters {
+    display: grid;
 }
+
+
 
 .difficulty-filters {
     display: flex;
-    margin-block: 1rem;
     flex-direction: column;
 }
 
@@ -213,10 +233,9 @@ input[type=checkbox] {
 }
 
 .add {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    padding: 0.5rem;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
 }
 
 .add input {
@@ -225,9 +244,12 @@ input[type=checkbox] {
     padding: 0.5rem;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
+    align-items: center;
 }
 
-.add input[type='submit'] {
+.add-btn {
+    border-radius: var(--brd-radius);
+    margin: 1rem;
     background-color: #3bb371;
     color: white;
     border: none;

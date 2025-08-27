@@ -13,13 +13,20 @@ function notification(type, message) {
 function addPage() {
     const selectedAllergies = [];
     document.querySelectorAll('input[name="allergy"]:checked').forEach(cb => selectedAllergies.push(cb.value));
+    const selectedDifficulties = [];
 
+    document.querySelectorAll('input[name=difficulty]:checked').forEach(checkbox => {
+            if (checkbox.checked) {
+                selectedDifficulties.push(checkbox.value)
+            }
+        })
+    }
     const newRecipe = {
         title: document.querySelector('#title').value,
         image: document.querySelector('#image').value.trim(),
         link: document.querySelector('#link').value,
         allergy: selectedAllergies.join(','),
-        level: document.querySelector('#level').value
+        level: selectedDifficulty,
     };
 
     if (newRecipe.title && newRecipe.link && newRecipe.level) {
@@ -28,7 +35,7 @@ function addPage() {
         notification('ok', 'Recept toegevoegd!');
     } else {
         notification('error', 'Niet alle velden ingevuld!');
-    }
+
 }
 
 document.querySelector('form.add').addEventListener('submit', (event) => {

@@ -1,52 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Uw voedingscentrum</title>
+    <title>'t Voedingshoekje – Recept toevoegen</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="add.js" type="module"></script>
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li class="logo">
+            <img src="img/logo.png" alt="Logo van 't Voedingshoekje">
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li class="current">Recept toevoegen</li>
+    </ul>
+</nav>
 
 <main>
-    <nav>
-        <ul>
-            <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Voeg recept toe</li>
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <h1>Nieuw recept toevoegen</h1>
+        <p>Vul hieronder de gegevens van jouw recept in en voeg het toe aan de receptenlijst.</p>
 
-    <h1>Voeg een nieuw recept toe</h1>
+        <form class="add" aria-label="Formulier om nieuw recept toe te voegen">
+            <div class="notification" aria-live="polite"></div>
 
-    <div class="notification"></div>
+            <label for="title">Titel van het recept</label>
+            <input type="text" id="title" name="title" placeholder="Bijv. Pasta met groenten" required>
 
+            <label for="text">Link naar de recept</label>
+            <input id="text" name="text" rows="6" placeholder="Plak hier de link van de recept" required></input>
 
-    <form class="add">
-        <label for="title">Recept Titel</label>
-        <input type="text" id="title" name="title">
+            <label for="image">Afbeeldings-URL</label>
+            <input type="url" id="image" name="image" placeholder="Plak hier de link naar een afbeelding">
 
-        <label for="text">Recept</label>
-        <input type="text" id="text" name="text">
+            <h3>Allergieën</h3>
+            <form class="allergies" aria-label="Allergie-opties">
+                <label for="allergy-gv">
+                    <input id="allergy-gv" type="checkbox" name="allergy" value="gv">
+                    Glutenvrij
+                </label>
+                <label for="allergy-lv">
+                    <input id="allergy-lv" type="checkbox" name="allergy" value="lv">
+                    Lactosevrij
+                </label>
+                <label for="allergy-sv">
+                    <input id="allergy-sv" type="checkbox" name="allergy" value="sv">
+                    Suikervrij
+                </label>
+            </form>
 
-        <label for="image">Afbeelding URL</label>
-        <input type="text" id="image" name="image" placeholder="Plak hier de afbeelding URL">
+            <form class="difficulty-filters" aria-label="Moeilijkheidsgraad">
+                <h3>Moeilijkheidsgraad</h3>
+                <label for="diff-super">
+                    <input id="diff-super" type="radio" name="difficulty" value="Super makkelijk">
+                    Super makkelijk
+                </label>
+                <label for="diff-makkelijk">
+                    <input id="diff-makkelijk" type="radio" name="difficulty" value="Makkelijk">
+                    Makkelijk
+                </label>
+                <label for="diff-gemiddeld">
+                    <input id="diff-gemiddeld" type="radio" name="difficulty" value="Gemiddeld">
+                    Gemiddeld
+                </label>
+                <label for="diff-moeilijk">
+                    <input id="diff-moeilijk" type="radio" name="difficulty" value="Moeilijk">
+                    Moeilijk
+                </label>
 
-        <label >Allergieën</label>
-        <label><input type="checkbox" name="allergy" value="gv">Glutenvrij</label>
-        <label><input type="checkbox" name="allergy" value="lv">Lactosevrij</label>
-        <label><input type="checkbox" name="allergy" value="zv">Zuikervrij</label>
-        <label for="level">Niveau</label>
-        <input type="text" id="level" name="level">
-        <input type="submit" value="Voeg jouw recept toe">
-    </form>
+                <input class="add-btn" type="submit" value="Voeg jouw recept toe">
 
+            </form>
+            </section>
 
-
+        </form>
+    </div>
 </main>
-<footer> Salah E. Tahir, 2025 &copy;</footer>
 
+<footer>
+    &copy; 2025 Salah E. Tahir.
+</footer>
 
 </body>
 </html>
