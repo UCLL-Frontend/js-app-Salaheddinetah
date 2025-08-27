@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added img field to add image url, added image to addRecipe">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added image place holder for my basicRecipes. Updated CSS for RWD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +109,10 @@
       <workItem from="1755578283128" duration="705000" />
       <workItem from="1755940321823" duration="27001000" />
       <workItem from="1756106620341" duration="5396000" />
-      <workItem from="1756143938408" duration="3062000" />
+      <workItem from="1756143938408" duration="3365000" />
+      <workItem from="1756215085727" duration="769000" />
+      <workItem from="1756237709249" duration="7256000" />
+      <workItem from="1756290570707" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -252,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756114591792</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added image place holder for my basicRecipes. Updated CSS for RWD">
+      <option name="closed" value="true" />
+      <created>1756147292513</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756147292513</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +290,7 @@
     <MESSAGE value="corrected checkboxes in add.html" />
     <MESSAGE value="fixed bug - notification and add.js and html working" />
     <MESSAGE value="added img field to add image url, added image to addRecipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="added img field to add image url, added image to addRecipe" />
+    <MESSAGE value="added image place holder for my basicRecipes. Updated CSS for RWD" />
+    <option name="LAST_COMMIT_MESSAGE" value="added image place holder for my basicRecipes. Updated CSS for RWD" />
   </component>
 </project>

@@ -21,39 +21,34 @@
     font-family: "Canva Sans";
 }
 
-body {
-    color: var(--text-color);
+html, body {
     background-color: var(--bg-color);
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-}
+
 
 nav {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    width: 100%;
+    place-items: center;
+    margin-inline: 1em;
+    margin-block: 1em;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
     font-weight: bolder;
     border-radius: var(--brd-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1.5rem;
+
 }
 
 nav ul a {
@@ -73,11 +68,11 @@ nav ul > li:not(.logo) {
     text-align: center;
     padding: 1rem 2rem;
     white-space: nowrap;
-    width: 100%;
+    width: auto;
 }
 
 nav ul > li:not(.logo,.current):hover {
-    box-shadow: 0px 0px 10px #8f8f8f;
+    box-shadow: 0 0 10px #8f8f8f;
 }
 
 nav ul > li {
@@ -98,20 +93,21 @@ nav ul > li.current {
     width: auto;
 }
 
-footer {
-    background-color: #3bb371;
-    padding: 1rem;
-    color: white;
+main {
+    flex: 1;
+    width: 70rem;
+    max-width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
 }
 
-.wrapper {
-    margin: 0;
-}
+
 
 .recipe-article {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    grid-template-columns: 1fr;
 }
 
 .recipe-article article {
@@ -124,11 +120,17 @@ footer {
     background-color: #fff;
     box-shadow: 5px 5px 10px #bbb;
 }
+article>img {
+    border-radius: 10px;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
 
 .delete {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;
+    right: 5px;
     width: 2rem;
 }
 
@@ -158,14 +160,18 @@ article.gv.lv.zv {
 
 .input-box {
     padding: 1rem;
-    width: 100%;
+    width: 90%;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
-    margin: 1rem 0;
+}
+
+.search-box-text {
+ font-size: 0.8rem;
 }
 
 .allergies {
     display: flex;
+    margin-block: 1rem;
     flex-direction: column;
 }
 
@@ -197,52 +203,33 @@ input[type=checkbox] {
 
 .notification {
     margin-block: 1rem;
-    background-color: #ffffff;
     padding: 1rem;
 }
 
 p.ok {
+    border-radius: var(--brd-radius);
+    background-color: #ecece9;
     color: darkgreen;
 }
 
 p.error {
+    background-color: #ecece9;
+    border-radius: var(--brd-radius);
     color: darkred;
 }
 
-article img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+.numberRecipes {
+    margin-bottom: 2rem;
 }
 
-@media (min-width: 500px) and (max-width: 899px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
-        width: auto;
-        padding: 0.5rem 1rem;
-    }
-    nav ul > li:not(.logo) {
-        width: auto;
-    }
-    .recipe-article {
-        grid-template-columns: repeat(2, 1fr);
-    }
+footer {
+    background-color: #3bb371;
+    padding: 1.5rem;
+    color: white;
+    margin: 0;
 }
 
-@media (min-width: 900px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        padding: 1rem 2rem;
-    }
-    nav ul > li:not(.logo) {
-        flex: 1;
-        text-align: center;
-    }
-    .recipe-article {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+
+
+
+

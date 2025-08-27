@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Uw voedingscentrum</title>
+    <title>'t Voedingshoekje - App</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js" type="module" ></script>
 </head>
 <body>
+<nav>
+    <ul>
+        <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
+        <li class="current">Home</li>
+        <li><a href="add.html">Voeg recept toe</a></li>
+    </ul>
+</nav>
+
 <main>
-    <nav>
-        <ul>
-            <li class="logo"><img src="img/logo.png" alt="'t voedingshoekje logo"></li>
-            <li class="current">Home</li>
-            <li><a href="add.html">Voeg recept toe</a></li>
-        </ul>
-    </nav>
+
 <div class="wrapper">
     <h1>Gezonde enkele recepten</h1>
 
-    <h2>Vind uw volgende recept met dit zoekveld</h2>
-    <p>Aantal karakters in dit zoekveld: <span class="number-characters"></span></p>
+    <h2>Vind uw volgende recept met dit zoekveld en deze filters</h2>
+
     <form class="search-box">
         <input class="input-box" type="text">
     </form>
+
+    <p class="search-box-text"> Aantal karakters in dit zoekveld: <span class="number-characters"></span></p>
 
     <form class="allergies">
         <label class="glutenfree">
@@ -45,9 +49,10 @@
         <p class="numberRecipes"> Totaal aantal recepten:  </p>
     </div>
 </div>
-</main>
-<footer> Salah E. Tahir, 2025 &copy;</footer>
 
+</main>
+
+<footer> Salah E. Tahir, 2025 &copy;</footer>
 
 </body>
 </html>

@@ -15,8 +15,8 @@ function addPage() {
     document.querySelectorAll('input[name="allergy"]:checked').forEach(cb => selectedAllergies.push(cb.value));
 
     const newRecipe = {
-        image: document.querySelector('#image').value.trim(),
         title: document.querySelector('#title').value,
+        image: document.querySelector('#image').value.trim(),
         text: document.querySelector('#text').value,
         allergy: selectedAllergies.join(','),
         level: document.querySelector('#level').value
