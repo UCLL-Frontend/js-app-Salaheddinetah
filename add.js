@@ -17,12 +17,12 @@ function addPage() {
     const newRecipe = {
         title: document.querySelector('#title').value,
         image: document.querySelector('#image').value.trim(),
-        text: document.querySelector('#text').value,
+        link: document.querySelector('#link').value,
         allergy: selectedAllergies.join(','),
         level: document.querySelector('#level').value
     };
 
-    if (newRecipe.title && newRecipe.text && newRecipe.level) {
+    if (newRecipe.title && newRecipe.link && newRecipe.level) {
         allRecipes.push(newRecipe);
         localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
         notification('ok', 'Recept toegevoegd!');

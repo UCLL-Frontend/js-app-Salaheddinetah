@@ -37,10 +37,11 @@ function addRecipe(recipe) {
     const recipeArticle = document.createElement('article');
     recipeArticle.innerHTML = `
         <img class="recipe-img" src="${recipe.image}" alt="recept afbeelding">
-        <p>${recipe.text}</p>
+      
         <h3>${recipe.level}</h3>
         <h3>${recipe.allergy}</h3>
         <img class="delete" src="./img/delete.svg" alt="delete recipe"> 
+        <a class="recipe-link ${recipe.allergy}" href="${recipe.link}">Recept link</a>
     `;
     recipeArticle.classList.add(...recipe.allergy.split(','));
     document.querySelector('.recipe-article').appendChild(recipeArticle);
