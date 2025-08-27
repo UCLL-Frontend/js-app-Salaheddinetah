@@ -4,7 +4,7 @@
     --brd-radius: 30px;
     --gv: #FFA07A;
     --lv: #ADD8E6;
-    --zv: #90EE90;
+    --sv: #90EE90;
 }
 
 @font-face {
@@ -150,26 +150,26 @@ main {
 
 article.gv { border-left-color: var(--gv); }
 article.lv { border-left-color: var(--lv); }
-article.zv { border-left-color: var(--zv); }
+article.sv { border-left-color: var(--sv); }
 
 article.gv.lv {
     border-left: 6px solid;
     border-image: linear-gradient(to bottom, var(--gv) 50%, var(--lv) 50%) 1;
 }
 
-article.gv.zv {
+article.gv.sv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--gv) 50%, var(--zv) 50%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 50%, var(--sv) 50%) 1;
 }
 
-article.lv.zv {
+article.lv.sv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--lv) 50%, var(--zv) 50%) 1;
+    border-image: linear-gradient(to bottom, var(--lv) 50%, var(--sv) 50%) 1;
 }
 
-article.gv.lv.zv {
+article.gv.lv.sv {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--gv) 33.33%, var(--lv) 33.33%, var(--zv) 33.34%) 1;
+    border-image: linear-gradient(to bottom, var(--gv) 33.33%, var(--lv) 33.33%, var(--sv) 33.34%) 1;
 }
 
 .input-box {
