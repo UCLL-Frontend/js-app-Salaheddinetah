@@ -59,8 +59,8 @@ function addRecipe(recipe) {
         <h2>${recipe.title}</h2>
         <img class="recipe-img" src="${recipe.image}" alt="recept afbeelding">
         
-        <p><strong>Niveau: </strong>${recipe.level} <p>
-        <p><strong>Dieetwensen: </strong>${allergyDisplayNames} <p>
+        <p><strong>Niveau: </strong>${recipe.level} </p>
+        <p><strong>Dieetwensen: </strong>${allergyDisplayNames} </p>
         <a class="recipe-link" href="${recipe.link}" style="border-color: ${linkColor}; color: ${linkColor};">Recept link</a>
         <img class="delete" src="./img/delete.svg" alt="delete recipe">
     `;
@@ -106,7 +106,7 @@ function recipeNumber() {
 // function to show all info
 function showInfo() {
     const selectedAllergies = allergyList();
-    const selectedDifficulties = difficultyList();
+    const selectedDifficulties = difficultyList(); // <- ADD THIS LINE
     const searchValue = document.querySelector('.input-box').value.toLowerCase();
     document.querySelector('.recipe-article').innerHTML = "";
 
@@ -115,7 +115,7 @@ function showInfo() {
         if (
             recipe.title.toLowerCase().includes(searchValue) &&
             (selectedAllergies.length === 0 || selectedAllergies.some(a => recipeAllergies.includes(a))) &&
-            (selectedDifficulties.length === 0 || selectedDifficulties.includes(recipe.level))
+            (selectedDifficulties.length === 0 || selectedDifficulties.includes(recipe.level)) // <- ADD THIS LINE
         ) {
             addRecipe(recipe);
         }
