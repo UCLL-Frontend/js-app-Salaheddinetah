@@ -47,6 +47,7 @@ nav ul {
     font-weight: bolder;
     border-radius: var(--brd-radius);
     display: flex;
+    justify-content: center;
     align-items: center;
     grid-gap: 1.5rem;
 
@@ -69,7 +70,6 @@ nav ul > li:not(.logo) {
     text-align: center;
     padding: 1rem 2rem;
     white-space: nowrap;
-    justify-items: center;
     width: auto;
 }
 

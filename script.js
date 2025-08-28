@@ -59,8 +59,8 @@ function addRecipe(recipe) {
         <h2>${recipe.title}</h2>
         <img class="recipe-img" src="${recipe.image}" alt="recept afbeelding">
         
-        <h3>${recipe.level}</h3>
-        <h3>${allergyDisplayNames}</h3>
+        <p><strong>Niveau: </strong>${recipe.level} <p>
+        <p><strong>Dieetwensen: </strong>${allergyDisplayNames} <p>
         <a class="recipe-link" href="${recipe.link}" style="border-color: ${linkColor}; color: ${linkColor};">Recept link</a>
         <img class="delete" src="./img/delete.svg" alt="delete recipe">
     `;
@@ -105,15 +105,17 @@ function recipeNumber() {
 
 // function to show all info
 function showInfo() {
-    const selectedAllergies = allergyList(); // to filter with allergy
+    const selectedAllergies = allergyList();
+    const selectedDifficulties = difficultyList();
     const searchValue = document.querySelector('.input-box').value.toLowerCase();
-    document.querySelector('.recipe-article').innerHTML = ""; // clear recipes
+    document.querySelector('.recipe-article').innerHTML = "";
 
     allRecipes.forEach(recipe => {
         const recipeAllergies = recipe.allergy.split(',').map(a => a.trim());
         if (
             recipe.title.toLowerCase().includes(searchValue) &&
-            (selectedAllergies.length === 0 || selectedAllergies.some(a => recipeAllergies.includes(a)))
+            (selectedAllergies.length === 0 || selectedAllergies.some(a => recipeAllergies.includes(a))) &&
+            (selectedDifficulties.length === 0 || selectedDifficulties.includes(recipe.level))
         ) {
             addRecipe(recipe);
         }

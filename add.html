@@ -29,8 +29,8 @@
             <label for="title">Titel van het recept</label>
             <input type="text" id="title" name="title" placeholder="Bijv. Pasta met groenten" required>
 
-            <label for="text">Link naar de recept</label>
-            <input id="text" name="text" rows="6" placeholder="Plak hier de link van de recept" required></input>
+            <label for="link">Link naar de recept</label>
+            <input type="url" id="link" name="link" placeholder="Plak hier de link van de recept" required>
 
             <label for="image">Afbeeldings-URL</label>
             <input type="url" id="image" name="image" placeholder="Plak hier de link naar een afbeelding">
@@ -69,11 +69,11 @@
                     <input id="diff-moeilijk" type="radio" name="difficulty" value="Moeilijk">
                     Moeilijk
                 </label>
-
+                <input class="add-btn" type="submit" value="Voeg jouw recept toe">
 
 
             </form>
-            <input class="add-btn" type="submit" value="Voeg jouw recept toe">
+
 
         </form>
     </div>
@@ -85,3 +85,5 @@
 
 </body>
 </html>
+
+
