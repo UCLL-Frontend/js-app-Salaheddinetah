@@ -61,7 +61,7 @@ function addRecipe(recipe) {
         
         <p><strong>Niveau: </strong>${recipe.level} </p>
         <p><strong>Dieetwensen: </strong>${allergyDisplayNames} </p>
-        <a class="recipe-link" href="${recipe.link}" style="border-color: ${linkColor}; color: ${linkColor};">Recept link</a>
+        <a class="recipe-link" href="${recipe.link}">Recept link</a>
         <img class="delete" src="./img/delete.svg" alt="delete recipe">
     `;
     recipeArticle.classList.add(...recipe.allergy.split(',').map(a => a.trim()));

@@ -8,7 +8,6 @@
     <script src="add.js" type="module"></script>
 </head>
 <body>
-
 <nav>
     <ul>
         <li class="logo">
@@ -18,26 +17,19 @@
         <li class="current">Recept toevoegen</li>
     </ul>
 </nav>
-
 <main>
     <div class="wrapper">
         <h1>Nieuw recept toevoegen</h1>
         <p>Vul hieronder de gegevens van jouw recept in en voeg het toe aan de receptenlijst.</p>
-
-        <form class="add" aria-label="Formulier om nieuw recept toe te voegen">
-
-
+        <form class="add">
             <label for="title">Titel van het recept*</label>
             <input type="text" id="title" name="title" placeholder="Bijv. Pasta met groenten" required>
-
             <label for="link">Link naar het recept*</label>
             <input type="url" id="link" name="link" placeholder="Plak hier de link van het recept" required>
-
             <label for="image">Afbeeldings-URL</label>
             <input type="url" id="image" name="image" placeholder="Plak hier de link naar een afbeelding">
-
             <h3>Allergieën</h3>
-            <div class="allergies" aria-label="Allergie-opties">
+            <div class="allergies">
                 <label for="allergy-gv">
                     <input id="allergy-gv" type="checkbox" name="allergy" value="gv">
                     Glutenvrij
@@ -51,9 +43,8 @@
                     Suikervrij
                 </label>
             </div>
-
             <h3>Moeilijkheidsgraad*</h3>
-            <div class="difficulty-filters" aria-label="Moeilijkheidsgraad">
+            <div class="difficulty-filters">
                 <label for="diff-super">
                     <input id="diff-super" type="radio" name="difficulty" value="Super makkelijk" required>
                     Super makkelijk
@@ -71,18 +62,13 @@
                     Moeilijk
                 </label>
             </div>
-
             <button type="submit" id="add-btn">Voeg jouw recept toe</button>
-
-            <div class="notification" aria-live="polite"></div>
-
+            <div class="notification"></div>
         </form>
     </div>
 </main>
-
 <footer>
     &copy; 2025 Salah E. Tahir.
 </footer>
-
 </body>
 </html>

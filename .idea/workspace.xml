@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="fixed filter by difficulty">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="fixed more RWD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
@@ -114,7 +113,8 @@
       <workItem from="1756360795221" duration="1221000" />
       <workItem from="1756370947188" duration="7098000" />
       <workItem from="1756394935352" duration="4108000" />
-      <workItem from="1756405392459" duration="3303000" />
+      <workItem from="1756405392459" duration="5838000" />
+      <workItem from="1756412478204" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -364,15 +364,29 @@
       <option name="project" value="LOCAL" />
       <updated>1756406355476</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="debugged add.js using claude, fixed, fixed RWD">
+      <option name="closed" value="true" />
+      <created>1756408771793</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1756408771793</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fixed more RWD">
+      <option name="closed" value="true" />
+      <created>1756412207662</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1756412207662</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added function find recipes using search box, added checkboxes and css to filter with allergies" />
-    <MESSAGE value="added recipeSection" />
     <MESSAGE value="added function to filter with allergies" />
     <MESSAGE value="updated css" />
     <MESSAGE value="added function delete recipe" />
@@ -396,6 +410,8 @@
     <MESSAGE value="fixed css articles, html forms" />
     <MESSAGE value="debugging app, fixing function addPage()" />
     <MESSAGE value="fixed filter by difficulty" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed filter by difficulty" />
+    <MESSAGE value="debugged add.js using claude, fixed, fixed RWD" />
+    <MESSAGE value="fixed more RWD" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed more RWD" />
   </component>
 </project>

@@ -13,47 +13,38 @@
         <li class="logo">
             <img src="img/logo.png" alt="Logo van 't Voedingshoekje">
         </li>
-        <li class="current" >Home</li>
+        <li class="current">Home</li>
         <li><a href="add.html">Voeg een recept toe</a></li>
     </ul>
 </nav>
-
 <main>
     <div class="wrapper">
         <h1>Gezonde en makkelijke recepten</h1>
-
         <h2>Zoek een recept dat bij jou past</h2>
         <p>Gebruik het zoekveld en de filters hieronder om geschikte recepten te vinden.</p>
-
-        <form class="search-box" role="search" aria-label="Zoek naar recepten">
+        <form class="search-box">
             <label for="search-input">Zoekveld</label>
             <input class="input-box" id="search-input" type="text" placeholder="Bijv. quiche, smoothie, cake...">
         </form>
-
         <p class="search-box-text">
             Aantal tekens in zoekveld: <span class="number-characters">0</span>
         </p>
-
         <div class="search-filters">
-            <form class="allergies" aria-label="Dieetfilters">
+            <form class="allergies">
                 <h4>Filter op dieetwensen</h4>
                 <label class="glutenfree" for="filter-glutenfree">
                     <input id="filter-glutenfree" name="allergy" value="gv" type="checkbox">
                     Glutenvrij
                 </label>
-
                 <label class="lacatosefree" for="filter-lactosefree">
                     <input id="filter-lactosefree" name="allergy" value="lv" type="checkbox">
                     Lactosevrij
                 </label>
-
                 <label class="Sugarfree" for="filter-sugarfree">
                     <input id="filter-sugarfree" name="allergy" value="sv" type="checkbox">
                     Suikervrij
                 </label>
             </form>
-
-
             <form class="difficulty-filters">
                 <h4>Filter op moeilijkheidsgraad</h4>
                 <label>
@@ -74,20 +65,11 @@
                 </label>
             </form>
         </div>
-
-
-
-
-        <section class="recipe-article" aria-live="polite">
-        </section>
-
-
-
+        <section class="recipe-article"></section>
         <h2>Statistieken</h2>
         <p class="numberRecipes">Totaal aantal recepten: <span id="total-count">0</span></p>
     </div>
 </main>
-
 <footer>
     &copy; 2025 Salah E. Tahir.
 </footer>

@@ -2,9 +2,9 @@
     --bg-color: #ecece9;
     --text-color: #0a0708;
     --brd-radius: 30px;
-    --gv: #FFA07A;
-    --lv: #ADD8E6;
-    --sv: #90EE90;
+    --gv: #8228b6;
+    --lv: #92c5de;
+    --sv: #e1732e;
 }
 
 @font-face {
@@ -120,7 +120,8 @@ main {
     border-bottom-right-radius: 10px;
     margin: 1rem;
     padding-inline: 1rem;
-    padding-block: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 7rem;
     border-left-width: 10px;
     background-color: #fff;
     box-shadow: 5px 5px 10px #bbb;
@@ -134,23 +135,13 @@ main {
     object-fit: cover;
 }
 
-.recipe-link {
-    display: inline-block;
-    padding: 0.8rem 1.2rem;
-    text-decoration: none;
-    background: white;
-    border: 2px solid;
-    border-radius: var(--brd-radius);
-    margin: 0.5rem 0;
-    position: relative;
-    z-index: 1;
-}
+
 
 
 
 .delete {
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     right: 10px;
     width: 2rem;
     aspect-ratio: 1;
@@ -198,6 +189,19 @@ article.gv.lv.sv::after {
     background-color: var(--sv);
 }
 
+.recipe-link {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        text-decoration: none;
+    box-shadow: 5px 5px 10px #bbb;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: var(--brd-radius);
+}
+
 .input-box {
     padding: 1rem;
     width: 90%;
@@ -240,13 +244,16 @@ article.gv.lv.sv::after {
 .difficulty-filters {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5em;
+
 }
 
 .difficulty-filters input[type=checkbox] {
     margin: 0.5rem;
 }
 
+.difficulty-filters input[type=radio] {
+    margin-block: 0.5rem;
+}
 
 .add {
     display: grid;
@@ -263,13 +270,14 @@ article.gv.lv.sv::after {
     align-items: center;
 }
 
-.add-btn {
+#add-btn {
     border-radius: var(--brd-radius);
-    margin: 1rem;
+    margin: 1.5rem;
     background-color: #3bb371;
     color: white;
     border: none;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .notification {
