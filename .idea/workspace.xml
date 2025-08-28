@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added more recipes to recipes.js, refactored my filter function. added filter with difficulty">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="add more css to add.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/recipes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,8 @@
       <workItem from="1756237709249" duration="7256000" />
       <workItem from="1756290570707" duration="5359000" />
       <workItem from="1756303980506" duration="3832000" />
-      <workItem from="1756314143907" duration="4976000" />
+      <workItem from="1756314143907" duration="5100000" />
+      <workItem from="1756360795221" duration="940000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -315,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756315889814</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add more css to add.html">
+      <option name="closed" value="true" />
+      <created>1756323056634</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1756323056634</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +353,7 @@
     <MESSAGE value="added recipe link button, added css for the button, added more recipes" />
     <MESSAGE value="updated html, added icon" />
     <MESSAGE value="added more recipes to recipes.js, refactored my filter function. added filter with difficulty" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more recipes to recipes.js, refactored my filter function. added filter with difficulty" />
+    <MESSAGE value="add more css to add.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more css to add.html" />
   </component>
 </project>
