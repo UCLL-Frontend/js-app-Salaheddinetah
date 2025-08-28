@@ -115,7 +115,6 @@ main {
 
 .recipe-article article {
     position: relative;
-    border: 0 solid var(--text-color);
     border-radius: 10px;
     margin: 1rem;
     padding-inline: 1rem;
@@ -162,6 +161,7 @@ article.sv { border-left-color: var(--sv); }
 article.gv.lv {
     border-left: 10px solid;
     border-image: linear-gradient(to bottom, var(--gv) 50%, var(--lv) 50%) 1;
+
 }
 
 article.gv.sv {

@@ -106,7 +106,7 @@ function recipeNumber() {
 // function to show all info
 function showInfo() {
     const selectedAllergies = allergyList();
-    const selectedDifficulties = difficultyList(); // <- ADD THIS LINE
+    const selectedDifficulties = difficultyList();
     const searchValue = document.querySelector('.input-box').value.toLowerCase();
     document.querySelector('.recipe-article').innerHTML = "";
 
@@ -115,7 +115,7 @@ function showInfo() {
         if (
             recipe.title.toLowerCase().includes(searchValue) &&
             (selectedAllergies.length === 0 || selectedAllergies.some(a => recipeAllergies.includes(a))) &&
-            (selectedDifficulties.length === 0 || selectedDifficulties.includes(recipe.level)) // <- ADD THIS LINE
+            (selectedDifficulties.length === 0 || selectedDifficulties.includes(recipe.level))
         ) {
             addRecipe(recipe);
         }

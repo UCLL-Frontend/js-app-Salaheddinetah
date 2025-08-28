@@ -1,5 +1,3 @@
-
-
 import { basicRecipes } from './recipes.js';
 
 let allRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || basicRecipes;
@@ -13,28 +11,27 @@ function notification(type, message) {
 function addPage() {
     const selectedAllergies = [];
     document.querySelectorAll('input[name="allergy"]:checked').forEach(cb => selectedAllergies.push(cb.value));
-    const selectedDifficulties = [];
 
-    document.querySelectorAll('input[name=difficulty]:checked').forEach(checkbox => {
-            if (checkbox.checked) {
-                selectedDifficulties.push(checkbox.value)
-            }
-        })
+    const selectedDifficulty = document.querySelector('input[name=difficulty]:checked')?.value;
 
     const newRecipe = {
         title: document.querySelector('#title').value,
         image: document.querySelector('#image').value.trim(),
-        link: document.querySelector('#link').value,
+        link: document.querySelector('#link').value,  // Changed from #text to #link
         allergy: selectedAllergies.join(','),
-        level: selectedDifficulties[0] || '',
+        level: selectedDifficulty,
     };
+
 
     if (newRecipe.title && newRecipe.link && newRecipe.level) {
         allRecipes.push(newRecipe);
         localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
         notification('ok', 'Recept toegevoegd!');
+
+
+        document.querySelector('form.add').reset();
     } else {
-        notification('error', 'Niet alle velden ingevuld!');
+        notification('error', 'Niet alle verplichte velden ingevuld!');
     }
 }
 
@@ -42,4 +39,3 @@ document.querySelector('form.add').addEventListener('submit', (event) => {
     event.preventDefault();
     addPage();
 });
-

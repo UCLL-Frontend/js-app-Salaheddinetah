@@ -2,6 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>'t Voedingshoekje – Recept toevoegen</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="add.js" type="module"></script>
@@ -24,19 +25,19 @@
         <p>Vul hieronder de gegevens van jouw recept in en voeg het toe aan de receptenlijst.</p>
 
         <form class="add" aria-label="Formulier om nieuw recept toe te voegen">
-            <div class="notification" aria-live="polite"></div>
 
-            <label for="title">Titel van het recept</label>
+
+            <label for="title">Titel van het recept*</label>
             <input type="text" id="title" name="title" placeholder="Bijv. Pasta met groenten" required>
 
-            <label for="link">Link naar de recept</label>
-            <input type="url" id="link" name="link" placeholder="Plak hier de link van de recept" required>
+            <label for="link">Link naar het recept*</label>
+            <input type="url" id="link" name="link" placeholder="Plak hier de link van het recept" required>
 
             <label for="image">Afbeeldings-URL</label>
             <input type="url" id="image" name="image" placeholder="Plak hier de link naar een afbeelding">
 
             <h3>Allergieën</h3>
-            <form class="allergies" aria-label="Allergie-opties">
+            <div class="allergies" aria-label="Allergie-opties">
                 <label for="allergy-gv">
                     <input id="allergy-gv" type="checkbox" name="allergy" value="gv">
                     Glutenvrij
@@ -49,12 +50,12 @@
                     <input id="allergy-sv" type="checkbox" name="allergy" value="sv">
                     Suikervrij
                 </label>
-            </form>
+            </div>
 
-            <form class="difficulty-filters" aria-label="Moeilijkheidsgraad">
-                <h3>Moeilijkheidsgraad</h3>
+            <h3>Moeilijkheidsgraad*</h3>
+            <div class="difficulty-filters" aria-label="Moeilijkheidsgraad">
                 <label for="diff-super">
-                    <input id="diff-super" type="radio" name="difficulty" value="Super makkelijk">
+                    <input id="diff-super" type="radio" name="difficulty" value="Super makkelijk" required>
                     Super makkelijk
                 </label>
                 <label for="diff-makkelijk">
@@ -69,11 +70,11 @@
                     <input id="diff-moeilijk" type="radio" name="difficulty" value="Moeilijk">
                     Moeilijk
                 </label>
-                <input class="add-btn" type="submit" value="Voeg jouw recept toe">
+            </div>
 
+            <button type="submit" id="add-btn">Voeg jouw recept toe</button>
 
-            </form>
-
+            <div class="notification" aria-live="polite"></div>
 
         </form>
     </div>
@@ -85,5 +86,3 @@
 
 </body>
 </html>
-
-
