@@ -21,9 +21,11 @@
     font-family: "Canva Sans";
 }
 
- body {
+ html, body {
     background-color: var(--bg-color);
     height: 100%;
+     max-width: 100%;
+     overflow-x: hidden;
     margin: 0;
     padding: 0;
     display: flex;
@@ -291,15 +293,11 @@ article.gv.lv.sv {
     border-radius: var(--brd-radius);
 }
 
-input#title {
-    margin-block: 1rem;
+input#title, input#link, input#image  {
+    margin: 1rem;
+
 }
-input#link {
-    margin-block: 1rem;
-}
-input#image {
-    margin-block: 1rem;
-}
+
 
 #add-btn {
     border-radius: var(--brd-radius);
@@ -371,7 +369,6 @@ footer {
         width: 100%;
         text-align: center;
         font-size: 0.9rem;
-        padding: 0.8rem;
     }
 
     .logo img {
@@ -440,7 +437,7 @@ footer {
 
     main {
         width: 70%;
-        padding: 0 1rem;
+        padding: 1rem;
     }
 
     .wrapper {
