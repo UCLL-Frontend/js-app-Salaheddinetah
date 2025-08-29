@@ -71,10 +71,12 @@ nav ul > li:not(.logo) {
     padding: 1rem 2rem;
     white-space: nowrap;
     width: auto;
+    box-shadow:  -5px 5px 10px #eaeae7,
+    5px -5px 10px #eeeeeb;
 }
 
 nav ul > li:not(.logo,.current):hover {
-    box-shadow: 0 0 10px #8f8f8f;
+    box-shadow: #8f8f8f 0 1px 5px;
 }
 
 nav ul > li {
@@ -88,6 +90,7 @@ nav ul > li.current {
     background-color: white;
     color: black;
     border: 3px solid #3bb371;
+
 }
 
 .logo img {
@@ -116,16 +119,16 @@ main {
 .recipe-article article {
     position: relative;
     border: 0 solid var(--text-color);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     margin: 1rem;
     padding-inline: 1rem;
     padding-top: 1rem;
     padding-bottom: 7rem;
     border-left-width: 10px;
-    background-color: #fff;
-    box-shadow: 5px 5px 10px #bbb;
-
+    background: #ffffff;
+    box-shadow:  27px 27px 54px #ebebeb,
+    -27px -27px 54px #ffffff;
 }
 .recipe-img {
     border-radius: 10px;
@@ -172,12 +175,17 @@ article.gv.lv.sv {
         bottom: 10px;
         left: 10px;
         text-decoration: none;
-    box-shadow: 5px 5px 10px #bbb;
+        background: #ffff;
         color: var(--text-color);
-        background-color: var(--bg-color);
         padding: 0.8rem;
         font-size: 1rem;
         border-radius: var(--brd-radius);
+        border: 3px solid #3bb371;
+}
+
+.recipe-link:hover {
+    background-color: #3bb371;
+    color: white;
 }
 
 .input-box {
@@ -221,10 +229,12 @@ article.gv.lv.sv {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin: 15px 0;
+    margin: 2rem;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: #8f8f8f 0 1px 5px;
 }
 
 .allergy-item {
@@ -294,6 +304,12 @@ article.gv.lv.sv {
     border: none;
     padding: 1rem;
     cursor: pointer;
+    box-shadow: #8f8f8f 0 1px 5px;
+}
+
+#add-btn:hover {
+    background-color: #3bb371;
+    box-shadow: #8f8f8f 0 0 10px;
 }
 
 .notification {

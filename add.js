@@ -23,7 +23,7 @@ function addPage() {
     };
 
 
-    if (newRecipe.title && newRecipe.link && newRecipe.level) {
+    if (newRecipe.title && newRecipe.link && newRecipe.level && newRecipe.allergy) {
         allRecipes.push(newRecipe);
         localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
         notification('ok', 'Recept toegevoegd!');
