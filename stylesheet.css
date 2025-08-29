@@ -288,12 +288,20 @@ article.gv.lv.sv {
 }
 
 .add input {
-    margin-block: 1rem;
-
     padding: 0.5rem;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
     align-items: center;
+}
+
+input#title {
+    margin-block: 1rem;
+}
+input#link {
+    margin-block: 1rem;
+}
+input#image {
+    margin-block: 1rem;
 }
 
 #add-btn {
