@@ -17,19 +17,27 @@ function addPage() {
     const newRecipe = {
         title: document.querySelector('#title').value,
         image: document.querySelector('#image').value.trim(),
-        link: document.querySelector('#link').value,  // Changed from #text to #link
+        link: document.querySelector('#link').value,
         allergy: selectedAllergies.join(','),
         level: selectedDifficulty,
     };
 
 
     if (newRecipe.title && newRecipe.link && newRecipe.level && newRecipe.allergy) {
-        allRecipes.push(newRecipe);
-        localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
-        notification('ok', 'Recept toegevoegd!');
+        const isDuplicate = allRecipes.some(recipe =>
+            recipe.title.toLowerCase() === newRecipe.title.toLowerCase()
+        );
 
-
-        document.querySelector('form.add').reset();
+        if (isDuplicate) {
+            notification('error', 'Een recept met deze titel bestaat al!');
+        } else if (newRecipe.image.trim() === '') {
+            notification('error', 'Vul een afbeeldings-URL in!');
+        } else {
+            allRecipes.push(newRecipe);
+            localStorage.setItem('savedRecipes', JSON.stringify(allRecipes));
+            notification('ok', 'Recept toegevoegd!');
+            document.querySelector('form.add').reset();
+        }
     } else {
         notification('error', 'Niet alle verplichte velden ingevuld!');
     }
