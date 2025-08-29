@@ -58,7 +58,7 @@ function addRecipe(recipe) {
     recipeArticle.innerHTML = `
         <h2>${recipe.title}</h2>
         <img class="recipe-img" src="${recipe.image}" alt="recept afbeelding">
-        
+       
         <p><strong>Niveau: </strong>${recipe.level} </p>
         <p><strong>Dieetwensen: </strong>${allergyDisplayNames} </p>
         <a class="recipe-link" href="${recipe.link}">Recept link</a>

@@ -2,9 +2,9 @@
     --bg-color: #ecece9;
     --text-color: #0a0708;
     --brd-radius: 30px;
-    --gv: #8228b6;
+    --gv: #e1732e;
     --lv: #92c5de;
-    --sv: #e1732e;
+    --sv: #a1cc89;
 }
 
 @font-face {
@@ -136,9 +136,6 @@ main {
 }
 
 
-
-
-
 .delete {
     position: absolute;
     bottom: 15px;
@@ -166,28 +163,9 @@ article.lv.sv {
     border-image: linear-gradient(to bottom, var(--lv) 50%, var(--sv) 50%) 1;
 }
 
-/* Remove your existing border-image rules and use this instead */
 article.gv.lv.sv {
-    position: relative;
-    border-left: 10px solid var(--gv);
-}
-
-article.gv.lv.sv::before {
-    border-image: linear-gradient(to bottom,
-    var(--gv) 33.33%,
-    var(--lv) 33.33% 66.66%,
-    var(--sv) 66.66%);
-}
-
-article.gv.lv.sv::after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    bottom: 0;
-    width: 10px;
-    height: 33.34%;
-    background-color: var(--sv);
-}
+    border-left: 10px solid;
+    border-image: linear-gradient(to bottom, #8228b6 50%, #8228b6 50%) 1;}
 
 .recipe-link {
         position: absolute;
@@ -237,8 +215,46 @@ article.gv.lv.sv::after {
     margin: 0.25rem 0;
 }
 
-.allergies input[type=checkbox] {
-    margin: 0;
+
+.allergy-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+.allergy-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.allergy-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.allergy-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.allergy-gv { background-color: var(--gv); margin-right: 0.5rem; }
+.allergy-lv { background-color: var(--lv); margin-right: 0.5rem; }
+.allergy-sv { background-color: var(--sv); margin-right: 0.5rem;}
+
+
+.allergy-triple {
+    background-color: #8228b6;
 }
 
 .difficulty-filters {
