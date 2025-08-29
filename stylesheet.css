@@ -21,7 +21,7 @@
     font-family: "Canva Sans";
 }
 
-html, body {
+ body {
     background-color: var(--bg-color);
     height: 100%;
     margin: 0;
@@ -35,7 +35,6 @@ h1 {
 
 
 nav {
-    place-items: center;
     margin-inline: 1em;
     margin-block: 1em;
 }
@@ -44,7 +43,6 @@ nav ul {
     list-style: none;
     gap: 1rem;
     padding: 0.5rem 1rem;
-    font-weight: bolder;
     border-radius: var(--brd-radius);
     display: flex;
     justify-content: center;
@@ -291,7 +289,6 @@ article.gv.lv.sv {
     padding: 0.5rem;
     border: 1px solid var(--text-color);
     border-radius: var(--brd-radius);
-    align-items: center;
 }
 
 input#title {

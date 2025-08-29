@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="added legend to help users filter by color">
+    <list default="true" id="0ad49ac4-039b-40b2-a683-07ec78699587" name="Changes" comment="fixed bug with duplicates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +114,8 @@
       <workItem from="1756412478204" duration="1535000" />
       <workItem from="1756451208653" duration="2307000" />
       <workItem from="1756453608726" duration="3315000" />
-      <workItem from="1756459104745" duration="3894000" />
+      <workItem from="1756459104745" duration="7675000" />
+      <workItem from="1756472631947" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit : added html, basic css, logo">
       <option name="closed" value="true" />
@@ -397,15 +397,37 @@
       <option name="project" value="LOCAL" />
       <updated>1756457160951</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed layout">
+      <option name="closed" value="true" />
+      <created>1756464080377</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1756464080377</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixed layout">
+      <option name="closed" value="true" />
+      <created>1756464375753</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1756464375753</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed bug with duplicates">
+      <option name="closed" value="true" />
+      <created>1756470640852</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1756470640852</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added function delete recipe" />
-    <MESSAGE value="added css for add.html" />
     <MESSAGE value="added new recipe and add recipe from the form function, updated html and added checkboxes for allergies" />
     <MESSAGE value="new file add.js" />
     <MESSAGE value="imported allRecipes" />
@@ -429,6 +451,8 @@
     <MESSAGE value="fixed more RWD" />
     <MESSAGE value="added varia tags, changed colors for accessibility" />
     <MESSAGE value="added legend to help users filter by color" />
-    <option name="LAST_COMMIT_MESSAGE" value="added legend to help users filter by color" />
+    <MESSAGE value="fixed layout" />
+    <MESSAGE value="fixed bug with duplicates" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with duplicates" />
   </component>
 </project>
